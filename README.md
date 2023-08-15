@@ -1,5 +1,5 @@
  <div id="header" align="center">
-![Untitled2](https://github.com/sandramsc/Golang_foundations/assets/19821445/0fc5e9b4-83c1-411f-90d8-39da967be69a)
+ <img src="https://github.com/sandramsc/Golang_foundations/assets/19821445/0fc5e9b4-83c1-411f-90d8-39da967be69a" title="Python" alt="Golang" width="650"/>
   <img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" width="250"/>
 </div>
 <div>
@@ -14,12 +14,6 @@ Embracing Go: My Journey into the World of Golang.
 - :telescope: freeCodeCamp exercises
 - :basecampy: Traversy Media exercises
 
-### :hammer_and_wrench: Languages and Tools :
-<div>
-  <img src="https://github.com/sandramsc/Golang_foundations/assets/19821445/0fc5e9b4-83c1-411f-90d8-39da967be69a" title="Python" alt="Python" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="40" height="40"/>&nbsp;
-  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" alt="Git" width="40" height="40"/>
-</div>
 
 ### 🏆 Achievements:
 - [Finalist (Top 5)](https://lablab.ai/event/chatgpt-api-and-whisper-api-global-hackathon): Lablab.ai - ChatGPT & Whisper AI hackathon (2023)
