@@ -1,5 +1,4 @@
  <div id="header" align="center">
-   ![Untitled](https://github.com/sandramsc/Golang_foundations/assets/19821445/4d264f38-e31a-46b1-b4e7-a6ff701bf24a)
 ![Untitled2](https://github.com/sandramsc/Golang_foundations/assets/19821445/0fc5e9b4-83c1-411f-90d8-39da967be69a)
   <img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" width="250"/>
 </div>
@@ -17,7 +16,7 @@ Embracing Go: My Journey into the World of Golang.
 
 ### :hammer_and_wrench: Languages and Tools :
 <div>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original-wordmark.svg" title="Python" alt="Python" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/sandramsc/Golang_foundations/assets/19821445/0fc5e9b4-83c1-411f-90d8-39da967be69a" title="Python" alt="Python" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg" title="Linux" alt="Linux" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original-wordmark.svg" title="Git" alt="Git" width="40" height="40"/>
 </div>
