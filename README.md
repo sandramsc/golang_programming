@@ -1,2 +1,2 @@
-# Go-Golang_foundations
+# Golang_foundations
 projects aimed at gaining foundational knowledge in Go (Golang)
