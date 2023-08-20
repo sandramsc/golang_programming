@@ -7,7 +7,7 @@ func main() {
 	conferenceName := "Go conference"
 	// const tells Go that the value is not allowed to change
 	const conferenceTickets int = 50
-	var remainingTickets int = 10
+	var remainingTickets uint = 10
 
 	fmt.Printf("conferenceTickets is %T, remainingTickets is %T, conferenceName is %T\n", conferenceTickets, remainingTickets, conferenceName)
 
@@ -18,7 +18,7 @@ func main() {
 	var firstName string
 	var lastName string
 	var email string
-	var userTicket int
+	var userTicket uint
 	// ask user for their name
 	// pointer will print out the memory address of the stored variable
 	fmt.Println("Enter your first name: ")
@@ -33,7 +33,9 @@ func main() {
 	fmt.Println("Enter number of tickets: ")
 	fmt.Scan(&userTicket)
 
-	userTicket = 2
-	fmt.Printf("Thank you, %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTicket, email)
+	remainingTickets = remainingTickets - userTicket
 
+	//userTicket = 2
+	fmt.Printf("Thank you, %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTicket, email)
+	fmt.Printf("%v tickets remaining for %v. \n", remainingTickets, conferenceName)
 }
