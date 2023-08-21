@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	// one can add a colon to a variable, but not a const or a var
@@ -15,36 +18,53 @@ func main() {
 	fmt.Printf("We have a total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your ticket here to attend")
 
-	// an array of 10 strings
-	var bookings [50]string
+	// Go only has one type of loop .. the for  loop
+	for {
+		// an array of 10 strings
+		//var bookings [50]string
+		// slice
+		var bookings = []string{}
 
-	var firstName string
-	var lastName string
-	var email string
-	var userTicket uint
-	// ask user for their name
-	// pointer will print out the memory address of the stored variable
-	fmt.Println("Enter your first name: ")
-	fmt.Scan(&firstName)
+		var firstName string
+		var lastName string
+		var email string
+		var userTicket uint
+		// ask user for their name
+		// pointer will print out the memory address of the stored variable
+		fmt.Println("Enter your first name: ")
+		fmt.Scan(&firstName)
 
-	fmt.Println("Enter your last name: ")
-	fmt.Scan(&lastName)
+		fmt.Println("Enter your last name: ")
+		fmt.Scan(&lastName)
 
-	fmt.Println("Enter your email name: ")
-	fmt.Scan(&email)
+		fmt.Println("Enter your email name: ")
+		fmt.Scan(&email)
 
-	fmt.Println("Enter number of tickets: ")
-	fmt.Scan(&userTicket)
+		fmt.Println("Enter number of tickets: ")
+		fmt.Scan(&userTicket)
 
-	remainingTickets = remainingTickets - userTicket
-	bookings[0] = firstName + " " + lastName
+		remainingTickets = remainingTickets - userTicket
+		// array
+		//bookings[0] = firstName + " " + lastName
+		// dynamic lists using slices
+		bookings = append(bookings, firstName+" "+lastName)
 
-	fmt.Printf("The whole array: %v\n", bookings)
-	fmt.Printf("The first value: %v\n", bookings[0])
-	fmt.Printf("Array type: %T\n", bookings)
-	fmt.Printf("Array length: %v\n", len(bookings))
+		//fmt.Printf("The whole array: %v\n", bookings)
+		//fmt.Printf("The first value: %v\n", bookings[0])
+		//fmt.Printf("Array type: %T\n", bookings)
+		//fmt.Printf("Array length: %v\n", len(bookings))
 
-	//userTicket = 2
-	fmt.Printf("Thank you, %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTicket, email)
-	fmt.Printf("%v tickets remaining for %v. \n", remainingTickets, conferenceName)
+		//userTicket = 2
+		fmt.Printf("Thank you, %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTicket, email)
+		fmt.Printf("%v tickets remaining for %v. \n", remainingTickets, conferenceName)
+
+		firstNames := []string{}
+		for _, booking := range bookings {
+			var names = strings.Fields(booking)
+			//var firstName = names[0]
+			firstNames = append(firstNames, names[0])
+		}
+		//fmt.Printf("These are all our bookings: %v\n", booking)
+		fmt.Printf("The first names of bookings are: %v\n", firstNames)
+	}
 }
