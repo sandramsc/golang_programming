@@ -2,7 +2,7 @@
   <h1 align="center">Golang Programming</h1>
 
 <div id="header" align="center">
-  <img src="https://github.com/sandramsc/golang_programming/assets/19821445/95fd3289-9c21-4497-a0d1-072d2957dc79" width="250"/>
+  <img src="https://github.com/sandramsc/golang_programming/assets/19821445/a22e6268-f305-47ff-a660-6acf438037a2" width="250"/>
 </div>
 
 ## Application Description
