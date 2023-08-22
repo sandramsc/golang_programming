@@ -20,10 +20,9 @@ func main() {
 
 	// Go only has one type of loop .. the for  loop
 	for {
-		// an array of 10 strings
-		//var bookings [50]string
+
 		// slice
-		var bookings = []string{}
+		bookings := []string{}
 
 		var firstName string
 		var lastName string
@@ -47,24 +46,20 @@ func main() {
 		// array
 		//bookings[0] = firstName + " " + lastName
 		// dynamic lists using slices
-		bookings = append(bookings, firstName+" "+lastName)
-
-		//fmt.Printf("The whole array: %v\n", bookings)
-		//fmt.Printf("The first value: %v\n", bookings[0])
-		//fmt.Printf("Array type: %T\n", bookings)
-		//fmt.Printf("Array length: %v\n", len(bookings))
+		bookings = append(bookings, firstName+""+lastName)
 
 		//userTicket = 2
 		fmt.Printf("Thank you, %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTicket, email)
 		fmt.Printf("%v tickets remaining for %v. \n", remainingTickets, conferenceName)
 
+		// slice for first names in the form of strings
 		firstNames := []string{}
 		for _, booking := range bookings {
 			var names = strings.Fields(booking)
-			//var firstName = names[0]
+
 			firstNames = append(firstNames, names[0])
 		}
 		//fmt.Printf("These are all our bookings: %v\n", booking)
-		fmt.Printf("The first names of bookings are: %v\n", firstNames)
+		fmt.Printf("The first names of bookings are: %v.\n", firstNames)
 	}
 }
