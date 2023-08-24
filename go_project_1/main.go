@@ -11,6 +11,8 @@ func main() {
 	// const tells Go that the value is not allowed to change
 	const conferenceTickets int = 50
 	var remainingTickets uint = 10
+	// slice
+	bookings := []string{}
 
 	fmt.Printf("conferenceTickets is %T, remainingTickets is %T, conferenceName is %T\n", conferenceTickets, remainingTickets, conferenceName)
 
@@ -20,9 +22,6 @@ func main() {
 
 	// Go only has one type of loop .. the for  loop
 	for {
-
-		// slice
-		bookings := []string{}
 
 		var firstName string
 		var lastName string
