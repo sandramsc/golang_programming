@@ -35,30 +35,52 @@ func main() {
 		fmt.Println("Enter your last name: ")
 		fmt.Scan(&lastName)
 
-		fmt.Println("Enter your email name: ")
+		fmt.Println("Enter your email: ")
 		fmt.Scan(&email)
 
 		fmt.Println("Enter number of tickets: ")
 		fmt.Scan(&userTicket)
 
-		remainingTickets = remainingTickets - userTicket
-		// array
-		//bookings[0] = firstName + " " + lastName
-		// dynamic lists using slices
-		bookings = append(bookings, firstName+""+lastName)
+		isValidName := len(firstName) >= 2 && len(lastName) >= 2
+		isValidEmail := strings.Contains(email, "@")
+		isValidTicketNumber := userTicket > 0 && userTicket <= remainingTickets
 
-		//userTicket = 2
-		fmt.Printf("Thank you, %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTicket, email)
-		fmt.Printf("%v tickets remaining for %v. \n", remainingTickets, conferenceName)
+		if isValidName && isValidEmail && isValidTicketNumber {
+			remainingTickets = remainingTickets - userTicket
+			bookings = append(bookings, firstName+""+lastName)
 
-		// slice for first names in the form of strings
-		firstNames := []string{}
-		for _, booking := range bookings {
-			var names = strings.Fields(booking)
+			//userTicket = 2
+			fmt.Printf("Thank you, %v %v for booking %v tickets. You will receive a confirmation email at %v.\n", firstName, lastName, userTicket, email)
+			fmt.Printf("%v tickets remaining for %v. \n", remainingTickets, conferenceName)
 
-			firstNames = append(firstNames, names[0])
+			// slice for first names in the form of strings
+			firstNames := []string{}
+			for _, booking := range bookings {
+				var names = strings.Fields(booking)
+
+				firstNames = append(firstNames, names[0])
+			}
+			//fmt.Printf("These are all our bookings: %v\n", booking)
+			fmt.Printf("The first names of bookings are: %v.\n", firstNames)
+
+			if remainingTickets == 0 {
+				// end the program
+				fmt.Println("Our conference is booked out, Come back next year.")
+				break
+
+			}
+		} else {
+			if !isValidEmail {
+				fmt.Println("first name or last name you entered is too short.")
+			}
+
+			if !isValidEmail {
+				fmt.Println("email address you entered does not contain @ sign")
+			}
+			if !isValidTicketNumber {
+				fmt.Println("number of tickets entered is invalid")
+			}
 		}
-		//fmt.Printf("These are all our bookings: %v\n", booking)
-		fmt.Printf("The first names of bookings are: %v.\n", firstNames)
 	}
+
 }
