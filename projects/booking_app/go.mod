@@ -1,3 +1,3 @@
-module go_project_1
+module booking_app
 
 go 1.21.0
